@@ -33,6 +33,7 @@ Integer idData=r.nextInt();
  String bodyData=JsonLoad.loadJsonFile("../APIFW/src/test/java/org/testing/Payloads/bodyData.json");
  bodyData=JsonReplacement.assignValuetoVariable(bodyData,"id",idData.toString());
  
+ System.out.println("changes done");
  
  HTTPMethods http=new HTTPMethods();
  Response res=http.PostRequest(bodyData,"QA_URI", pr);
